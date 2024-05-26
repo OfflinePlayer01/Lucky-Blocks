@@ -1,0 +1,183 @@
+local LBBattlegrounds = Instance.new("ScreenGui")
+local BG = Instance.new("Frame")
+local Exit = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local LuckyBlock = Instance.new("TextButton")
+local SuperLuckyBlock = Instance.new("TextButton")
+local DiamondLuckyBlock = Instance.new("TextButton")
+local RainbowLuckyBlock = Instance.new("TextButton")
+local GalaxyLuckyBlock = Instance.new("TextButton")
+
+LBBattlegrounds.Name = "LB Battlegrounds"
+LBBattlegrounds.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LBBattlegrounds.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+BG.Name = "BG"
+BG.Parent = LBBattlegrounds
+BG.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+BG.BorderColor3 = Color3.fromRGB(141, 14, 14)
+BG.BorderSizePixel = 4
+BG.Position = UDim2.new(0.25818181, 0, 0.230882347, 0)
+BG.Size = UDim2.new(0, 661, 0, 314)
+
+Exit.Name = "Exit"
+Exit.Parent = BG
+Exit.BackgroundColor3 = Color3.fromRGB(161, 161, 161)
+Exit.Position = UDim2.new(0.0135994591, 0, 0.0258429945, 0)
+Exit.Size = UDim2.new(0, 22, 0, 21)
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = Exit
+
+LuckyBlock.Name = "LuckyBlock"
+LuckyBlock.Parent = BG
+LuckyBlock.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+LuckyBlock.Position = UDim2.new(0.0286370497, 0, 0.4186306, 0)
+LuckyBlock.Size = UDim2.new(0, 200, 0, 50)
+LuckyBlock.Font = Enum.Font.Oswald
+LuckyBlock.Text = "Give LuckyBlock"
+LuckyBlock.TextColor3 = Color3.fromRGB(0, 0, 0)
+LuckyBlock.TextScaled = true
+LuckyBlock.TextSize = 14.000
+LuckyBlock.TextWrapped = true
+
+SuperLuckyBlock.Name = "Super LuckyBlock"
+SuperLuckyBlock.Parent = BG
+SuperLuckyBlock.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
+SuperLuckyBlock.Position = UDim2.new(0.348713607, 0, 0.4186306, 0)
+SuperLuckyBlock.Size = UDim2.new(0, 200, 0, 50)
+SuperLuckyBlock.Font = Enum.Font.Oswald
+SuperLuckyBlock.Text = "Give Super"
+SuperLuckyBlock.TextColor3 = Color3.fromRGB(0, 0, 0)
+SuperLuckyBlock.TextScaled = true
+SuperLuckyBlock.TextSize = 14.000
+SuperLuckyBlock.TextWrapped = true
+
+DiamondLuckyBlock.Name = "Diamond LuckyBlock"
+DiamondLuckyBlock.Parent = BG
+DiamondLuckyBlock.BackgroundColor3 = Color3.fromRGB(115, 115, 115)
+DiamondLuckyBlock.Position = UDim2.new(0.670321226, 0, 0.4186306, 0)
+DiamondLuckyBlock.Size = UDim2.new(0, 200, 0, 50)
+DiamondLuckyBlock.Font = Enum.Font.Oswald
+DiamondLuckyBlock.Text = "Give Diamond"
+DiamondLuckyBlock.TextColor3 = Color3.fromRGB(0, 0, 0)
+DiamondLuckyBlock.TextScaled = true
+DiamondLuckyBlock.TextSize = 14.000
+DiamondLuckyBlock.TextWrapped = true
+
+RainbowLuckyBlock.Name = "Rainbow LuckyBlock"
+RainbowLuckyBlock.Parent = BG
+RainbowLuckyBlock.BackgroundColor3 = Color3.fromRGB(121, 121, 121)
+RainbowLuckyBlock.Position = UDim2.new(0.0273560286, 0, 0.622452259, 0)
+RainbowLuckyBlock.Size = UDim2.new(0, 200, 0, 50)
+RainbowLuckyBlock.Font = Enum.Font.Oswald
+RainbowLuckyBlock.Text = "Give Rainbow"
+RainbowLuckyBlock.TextColor3 = Color3.fromRGB(0, 0, 0)
+RainbowLuckyBlock.TextScaled = true
+RainbowLuckyBlock.TextSize = 14.000
+RainbowLuckyBlock.TextWrapped = true
+
+GalaxyLuckyBlock.Name = " Galaxy LuckyBlock"
+GalaxyLuckyBlock.Parent = BG
+GalaxyLuckyBlock.BackgroundColor3 = Color3.fromRGB(140, 140, 140)
+GalaxyLuckyBlock.Position = UDim2.new(0.348082215, 0, 0.622452259, 0)
+GalaxyLuckyBlock.Size = UDim2.new(0, 200, 0, 50)
+GalaxyLuckyBlock.Font = Enum.Font.Oswald
+GalaxyLuckyBlock.Text = "Give Galaxy"
+GalaxyLuckyBlock.TextColor3 = Color3.fromRGB(0, 0, 0)
+GalaxyLuckyBlock.TextScaled = true
+GalaxyLuckyBlock.TextSize = 14.000
+GalaxyLuckyBlock.TextWrapped = true
+
+-- Scripts:
+
+local function QSVBZKR_fake_script() -- Exit.Script 
+	local script = Instance.new('Script', Exit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(QSVBZKR_fake_script)()
+local function PBRF_fake_script() -- LuckyBlock.LB 
+	local script = Instance.new('Script', LuckyBlock)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.SpawnLuckyBlock:FireServer()
+	end)
+end
+coroutine.wrap(PBRF_fake_script)()
+local function UTCWX_fake_script() -- SuperLuckyBlock.SB 
+	local script = Instance.new('Script', SuperLuckyBlock)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.SpawnSuperBlock:FireServer()
+	end)
+end
+coroutine.wrap(UTCWX_fake_script)()
+local function LFKVXA_fake_script() -- DiamondLuckyBlock.DB 
+	local script = Instance.new('Script', DiamondLuckyBlock)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.SpawnDiamondBlock:FireServer()
+	end)
+end
+coroutine.wrap(LFKVXA_fake_script)()
+local function TBQZ_fake_script() -- RainbowLuckyBlock.RB 
+	local script = Instance.new('Script', RainbowLuckyBlock)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.ReplicatedStorage.SpawnRainbowBlock:FireServer()
+	end)
+end
+coroutine.wrap(TBQZ_fake_script)()
+local function PTVFSYM_fake_script() -- GalaxyLuckyBlock.GB 
+	local script = Instance.new('Script', GalaxyLuckyBlock)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	game.ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+		end)
+end
+coroutine.wrap(PTVFSYM_fake_script)()
+local function BLSGOKB_fake_script() -- BG.DragGui 
+	local script = Instance.new('LocalScript', BG)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local mainframe = script.Parent
+	local TopBar = mainframe
+	local Camera = workspace:WaitForChild("Camera")
+	
+	local DragMousePosition
+	local FramePosition
+	
+	local DragAble = false
+	
+	TopBar.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			DragAble = true
+			DragMousePosition = Vector2.new(input.Position.X, input.Position.Y)
+			FramePosition = Vector2.new(mainframe.Position.X.Scale, mainframe.Position.Y.Scale)
+		end
+	end)
+	
+	TopBar.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			DragAble = false
+		end	
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if DragAble == true then
+			local NewPosition = FramePosition + ((Vector2.new(input.Position.X, input.Position.Y) - DragMousePosition) / Camera.ViewportSize)
+			mainframe.Position = UDim2.new(NewPosition.X, 0, NewPosition.Y, 0)
+		end
+	end)
+end
+coroutine.wrap(BLSGOKB_fake_script)()
